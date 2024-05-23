@@ -1,0 +1,22 @@
+{
+  "name": "dolos-example",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc --build",
+    "start": "npm run build && node ./dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ksrnnb",
+  "license": "MIT",
+  "dependencies": {
+    "@dodona/dolos-lib": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
