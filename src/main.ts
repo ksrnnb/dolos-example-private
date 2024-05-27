@@ -8,8 +8,6 @@ type Code = {
   runtime: Runtime;
 };
 
-const index = new FingerprintIndex(Options.defaultKgramLength, Options.defaultKgramsInWindow);
-
 // Problem Sample: https://leetcode.com/problems/fizz-buzz/
 const codes: Code[] = [
   {
@@ -38,9 +36,9 @@ const codes: Code[] = [
         for i in range(1, n + 1):
             result = ""
             if i % 3 == 0:
-                result += "Fizz"
+                result = "Fizz"
             if i % 5 == 0:
-                result += "Buzz"
+                result = "Buzz"
             if result == "":
                 result = str(i)
             answer.append(result)
@@ -83,6 +81,8 @@ for (const code of codes) {
 
   tokenizedFiles.push(tokenizedFile);
 }
+
+const index = new FingerprintIndex(Options.defaultKgramLength, Options.defaultKgramsInWindow);
 
 index.addFiles(tokenizedFiles);
 
